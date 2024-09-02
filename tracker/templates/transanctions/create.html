@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block body %}
+<form action="" method="post">
+    <input type="number" name="amount" placeholder="Transanction amount" value="{{ amount }}" />
+    <select name="type" id="">
+        <option value="income" selected>Income</option>
+        <option value="expense">Expense</option>
+    </select>
+    <input type="text" name="category" value="{{ category }}" maxlength="15" placeholder="Food, transport, salary..." />
+    <textarea name="description" id="" placeholder="Description">{{ description }}</textarea>
+    <button style="margin-top: 1rem;">Add transanction</button>
+</form>
+{% endblock %}
+<!-- Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius rem placeat repellat! Itaque, sint! -->

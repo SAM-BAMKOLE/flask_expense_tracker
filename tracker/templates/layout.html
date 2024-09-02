@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block page_title %}Title{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+</head>
+
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    {% if category == 'success' %}
+    <nav
+        style="margin-bottom: 2rem; color: white; border-radius: 1rem; padding: .7rem 1rem; background-color: lightgreen">
+        {{ message }}
+    </nav>
+    {% else %}
+    <nav
+        style="margin-bottom: 2rem; color: white; border-radius: 1rem; padding: .7rem 1rem; background-color: lightcoral">
+        {{ message }}
+    </nav>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+    {% block body %}Body{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block body %}
+<form action="" method="post">
+    <input type="text" , name="user" placeholder="Your username or email" value="{{ user }}" />
+    <input type="password" , name="password" placeholder="Your password" value="{{ password }}" />
+    <p>
+        <input type="checkbox" name="remember_me" id="remember-me">
+        <label for="remember-me">Remember me</label>
+    </p>
+    <button style="margin-top: 1rem;">Sign in</button>
+</form>
+{% endblock %}

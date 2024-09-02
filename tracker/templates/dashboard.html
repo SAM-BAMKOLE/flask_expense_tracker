@@ -1,0 +1,17 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h1>Welcome {{ user.username }}</h1>
+<div class="">
+    <a href="/delete-account/{{ user.id }}">Delete account</a>
+</div>
+{% if transanctions %}
+<ul>
+    {% for transanction in transanctions %}
+    <li>{{ transanction.type.value }} >> {{ transanction.amount }} >> {{ transanction.category }}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>You have no transanctions</p>
+<a href="/transanctions/create">Add a transanction</a>
+{% endif %}
+{% endblock %}

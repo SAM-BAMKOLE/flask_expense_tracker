@@ -1,0 +1,9 @@
+{% extends 'layout.html' %}
+{% block body %}
+<form action="" method="post">
+    <input type="text" , name="username" placeholder="Your username" value="{{ username }}" />
+    <input type="email" , name="email" placeholder="Your email" value="{{ email }}" />
+    <input type="password" , name="password" placeholder="Your password" value="{{ password }}" />
+    <button style="margin-top: 1rem;">Sign up</button>
+</form>
+{% endblock %}
